@@ -3,10 +3,7 @@ public class TipoOperacionEnum{
 	public enum Operaciones{
 		CREARUSUARIOEXTERNO                     (1),
 		ELIMINARUSUARIOEXTERNO                  (2);
-    .
-    .
-    .
-    
+
 		
 		private final Integer operacion;
 
