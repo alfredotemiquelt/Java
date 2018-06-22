@@ -1,4 +1,4 @@
-/*Transformar un Objeto a XML*/
+/*Transformar un XML a Objeto*/
 
 public class HelperUnMarshallXMLToObject {
     private static final Logger logger = Logger.getLogger(HelperUnMarshallXMLToObject.class);
