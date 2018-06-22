@@ -1,0 +1,21 @@
+/*Transformar un Objeto a XML*/
+
+public class HelperUnMarshallXMLToObject {
+    private static final Logger logger = Logger.getLogger(HelperUnMarshallXMLToObject.class);
+    
+    public Object transformaObjetoToXML(String xml) {
+      JAXBContext jaxbContext;
+      Unmarshaller jaxbUnmarshaller;
+          try {
+            jaxbContext = JAXBContext.newInstance(CrearUsuarioExterno.class);
+            jaxbUnmarshaller = jaxbContext.createUnmarshaller();		     
+            CrearUsuarioExterno crearUsuario = (CrearUsuarioExterno) jaxbUnmarshaller.unmarshal(new StringReader(xml));
+            return crearUsuario;
+          } catch (JAXBException e) {
+            logger.error("----- Ocurrio un error al realizar la oepracion <convierteObjetoToXML>: " + e);
+            e.printStackTrace();
+          }
+      }		
+      return "";
+    }
+}
