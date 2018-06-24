@@ -4,7 +4,6 @@ public class TipoOperacionEnum{
 		CREARUSUARIOEXTERNO                     (1),
 		ELIMINARUSUARIOEXTERNO                  (2);
 
-		
 		private final Integer operacion;
 
 		private Operaciones(Integer operacion) {
